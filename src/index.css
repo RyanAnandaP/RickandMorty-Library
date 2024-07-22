@@ -1,0 +1,292 @@
+@import url("https://fonts.googleapis.com/css2?family=Creepster&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Coming+Soon&display=swap");
+
+* {
+  box-sizing: border-box;
+  font-family: "Creepster", system-ui;
+}
+
+a{
+  text-decoration: none;
+}
+
+body {
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #203745;
+  min-height: 100vh;
+}
+
+#main-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 3rem 15%;
+}
+
+#main-header #header-location{
+  font-size: 2rem;
+  color: white;
+}
+
+#main-header #header-location:hover{
+  color: red;
+}
+
+#main-title {
+  display: flex;
+  align-items: center;
+}
+
+#main-title img {
+  width: 5rem;
+  margin-right: 1.5rem;
+}
+
+#main-title h1 {
+  text-align: center;
+  text-transform: uppercase;
+  color: #41b4c9;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+  font-size: 3.5rem;
+  margin: 0;
+}
+
+#character-list {
+  width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#character-name:hover{
+  color: red;
+}
+
+#character-list h2 {
+  font-size: 1.5rem;
+  color: #41b4c9;
+  -webkit-text-stroke-width: 1px;
+  -webkit-text-stroke-color: white;
+}
+
+#button-next-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 0.5rem;
+}
+
+
+#button-next-container button{
+  font-size: 1.5rem;
+  border-radius: 5px;
+}
+
+#button-next-container button:hover{
+  background-color: #41b4c9;
+  cursor: pointer;
+}
+#products {
+  list-style: none;
+  margin: 0;
+  padding: 0;
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
+  gap: 2rem;
+}
+
+#product {
+  width: 20rem;
+  height: fit-content;
+  background-color: #4f6675;
+  display: inline-block;
+  margin: 1rem;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  border-radius: 8px;
+}
+
+#product img {
+  width: 100%;
+  border-radius: 3px;
+}
+
+#product-content {
+  flex: 1;
+  padding: 0 1rem 0.5rem 1rem;
+  display: flex;
+  flex-direction: row;
+  justify-content: space-between;
+}
+
+#product-content h3 {
+  font-size: 1.25rem;
+  font-family: "Coming Soon", cursive;
+  color: #bed6e8;
+  text-align: center;
+  margin-bottom: 0.15rem;
+}
+#container {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 20px;
+  width: 100%;
+  height: 100vh;
+  border: 1px solid white;
+}
+
+#characterDetailContainer {
+  width: 70%;
+  margin: 2rem auto;
+  text-align: center;
+}
+
+#card-container{
+  display: flex;
+  justify-content: center;
+  padding: 10px;
+}
+
+.card {
+  width: 35rem;
+  height: 55rem;
+  background: #4f6675;
+  border-radius: 30px;
+  transition: 0.2s ease-in-out;
+  padding-bottom: 10px;
+}
+
+.img {
+  width: 100%;
+  height: 50%;
+  border-top-left-radius: 30px;
+  border-top-right-radius: 30px;
+  background: #bed6e8;
+  display: flex;
+  align-items: top;
+  justify-content: left;
+}
+
+.save {
+  transition: 0.2s ease-in-out;
+  border-radius: 10px;
+  margin: 20px;
+  width: 30px;
+  height: 30px;
+  background-color: #ffffff;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.text {
+  margin-left: 1.5rem;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.save .svg {
+  transition: 0.2s ease-in-out;
+  width: 15px;
+  height: 15px;
+}
+
+.icon-box {
+  margin-top: 15px;
+  width: 70%;
+  padding: 10px;
+  background-color: #e3fff9;
+  border-radius: 10px;
+  display: flex;
+  align-items: center;
+  justify-content: left;
+}
+
+.icon-box svg {
+  width: 17px;
+}
+
+.text .h3{
+  font-size: 2.5rem;
+  color: white;
+}
+
+.text .p {
+  color: white;
+  font-size: 1rem;
+}
+
+.icon-box .span {
+  margin-left: 10px;
+  font-family: 'Lucida Sans' sans-serif;
+  font-size: 13px;
+  font-weight: 500;
+  color: #9198e5;
+}
+
+.input-container{
+  display: flex;
+  justify-content: center;
+  margin-bottom: 1rem;
+}
+
+.input-container input{
+  border-radius: 5px;
+}
+
+.button-container{
+  display: flex;
+  justify-content: center;
+}
+
+.button-container button{
+  padding: 5px 12px;
+  font-size: 1.5rem;
+  border-radius: 8px;
+  border: none;
+}
+
+.button-container button:hover{
+  background-color: #e3fff9;
+  cursor: pointer;
+}
+
+.locations-list{
+  list-style: none;
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+  justify-content: center;
+  color: white;
+  text-decoration: none;
+}
+
+.location-name{
+  color: #41b4c9;
+  font-size: 2rem;
+}
+
+.location-name:hover{
+  color: red;
+}
+#location-detail-container{
+  display: flex;
+  justify-content: center;
+}
+
+#location-detail-container h2{
+  color: #41b4c9;
+  font-size: 3rem;
+}
+
+#people{
+  color: white;
+}
+
+#people ol li{
+  font-size: 1rem;
+}
+
+
