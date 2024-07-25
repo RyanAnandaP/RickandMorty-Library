@@ -1,5 +1,7 @@
 import React from "react";
 import RickLogo from "../assets/rickmortylogo.png";
+import { Link } from "react-router-dom";
+import { RouterProvider } from "react-router-dom";
 
 const Header = () => {
   return (
@@ -7,13 +9,13 @@ const Header = () => {
       <header id="main-header">
         <div id="main-title">
           <img src={RickLogo} alt="Rick Morty Logo" />
-          <a href="/">
+          <Link to='/'>
             <h1>Rick & Morty</h1>
-          </a>
+          </Link>
         </div>
-        <a href="/locations" id="header-location">
+        <Link to='/locations' id="header-location" >
           Location
-        </a>
+        </Link>
       </header>
     </>
   );

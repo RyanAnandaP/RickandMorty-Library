@@ -2,6 +2,7 @@ import React, { useState, useEffect, createContext, useContext } from "react";
 import CharacterList from "../components/CharacterList";
 import Product from "../components/Product";
 import { useAppContext } from "../components/Provider";
+import Header from "../components/Header";
 
 const MainHome = () => {
   const { characters, loadMore, page} = useAppContext();
@@ -12,6 +13,7 @@ const MainHome = () => {
 
   return (
     <>
+    <Header/>
       <CharacterList>
         {characters.map((character) => (
           <Product

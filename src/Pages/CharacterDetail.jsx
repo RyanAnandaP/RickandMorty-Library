@@ -1,17 +1,18 @@
-import React, {useState, useEffect} from "react";
+import React, { useState, useEffect } from "react";
 import { GraphQLClient, gql } from "graphql-request";
 import Details from "../components/Details";
-import { useParams } from 'react-router-dom';
+import { useParams } from "react-router-dom";
+import Header from "../components/Header";
 
 const client = new GraphQLClient("https://rickandmortyapi.com/graphql");
 
 const CharacterDetail = () => {
-  const [character, setCharacter] = useState(null)
+  const [character, setCharacter] = useState(null);
   const { id } = useParams();
 
   useEffect(() => {
     const fetchCharacterDetails = async () => {
-        const characterDetailsQuery = gql`
+      const characterDetailsQuery = gql`
             query {
                 charactersByIds(ids: ${id}){
                     id,
@@ -37,11 +38,12 @@ const CharacterDetail = () => {
     fetchCharacterDetails();
   }, [id]);
 
-  return(
-    <div>
-      {character && <Details character={character}/>}
-    </div>
-  )
+  return (
+    <>
+      <Header />
+      <div>{character && <Details character={character} />}</div>
+    </>
+  );
 };
 
 export default CharacterDetail;
