@@ -5,15 +5,15 @@ import { useAppContext } from "../components/Provider";
 import Header from "../components/Header";
 
 const MainHome = () => {
-  const { characters, loadMore, page} = useAppContext();
+  const { characters, loadMore, page } = useAppContext();
 
   const handleLoadMore = (pages) => {
-    loadMore(pages)
-  }
+    loadMore(pages);
+  };
 
   return (
     <>
-    <Header/>
+      <Header />
       <CharacterList>
         {characters.map((character) => (
           <Product
@@ -25,7 +25,12 @@ const MainHome = () => {
         ))}
       </CharacterList>
       <div id="button-next-container">
-          <button onClick={() => handleLoadMore(page)}>Load More</button>
+        <button
+          className="slide-up-fade-in"
+          onClick={() => handleLoadMore(page)}
+        >
+          Load More
+        </button>
       </div>
     </>
   );

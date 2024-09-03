@@ -41,7 +41,7 @@ const CharacterDetail = () => {
   return (
     <>
       <Header />
-      <div>{character && <Details character={character} />}</div>
+      <div className="slide-up-fade-in">{character && <Details character={character} />}</div>
     </>
   );
 };
